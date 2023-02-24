@@ -32,7 +32,7 @@ public class UserMgtController {
     public void addMpUser(@RequestBody MpUser mpUser){mpUserManagementService.addMpUser(mpUser);}
     @RequestMapping("/users")
     public User[] getUserList() {
-        return userManagementService.getUserList().toArray(new User[0]);
+        return userManagementService.getUserLists().toArray(new User[0]);
     }
 
     @RequestMapping(value = "/users/add", method = RequestMethod.POST)
